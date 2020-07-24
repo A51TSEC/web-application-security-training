@@ -1,0 +1,33 @@
+Introduction
+General
+-----------------------------
+(A1) Inection:
+-----SQL Injection
+2. Try to retrieve the department of the employee Bob Franco. Note that you have been granted full administrator privileges in this assignment and can access all data without authentication.
+SELECT department from employees where first_name='Bob'
+3. Try to change the department of Tobi Barnett to 'Sales'. Note that you have been granted full administrator privileges in this assignment and can access all data without authentication.
+UPDATE employees SET department='Sales' WHERE first_name='Tobi'
+-----SQL Injection Advanced
+-----SQL Injection Mitigation
+-----Path Traversal
+-----------------------------
+(2) Broken Authentication
+-----------------------------
+(3) Sensitive Data Exposure
+-----------------------------
+(4) XML Enternal Entities XXE
+-----------------------------
+(5) Broken Acess Control
+-----------------------------
+(6) Cross Site Scripting XSS
+-----------------------------
+(7) Insecure Deseialization
+-----------------------------
+(8) Vulnerable Components
+-----------------------------
+(9) Reuqest Forgeries
+-----------------------------
+Client Side
+-----------------------------
+Challenges
+-----------------------------
