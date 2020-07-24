@@ -14,6 +14,11 @@ ALTER TABLE employees ADD COLUMN phone varchar(20);
 -----Path Traversal
 5. Try to grant the usergroup "UnauthorizedUser" the right to alter tables:
 GRANT ALTER TABLE TO UnauthorizedUser;
+9. The query in the code builds a dynamic query as seen in the previous example. The query is build by concatenating strings making it susceptible to String SQL injection:
+"SELECT * FROM user_data WHERE first_name = 'John' AND last_name = '" + lastName + "'";
+SELECT * FROM user_data WHERE first_name = 'John' AND last_name = 
+SELECT * FROM user_data WHERE first_name = 'John' and last_name = 'Smith' and Last_Name = 'Smith'
+
 -----------------------------
 (2) Broken Authentication
 -----------------------------
