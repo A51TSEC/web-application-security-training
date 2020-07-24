@@ -7,6 +7,8 @@ General
 SELECT department from employees where first_name='Bob'
 3. Try to change the department of Tobi Barnett to 'Sales'. Note that you have been granted full administrator privileges in this assignment and can access all data without authentication.
 UPDATE employees SET department='Sales' WHERE first_name='Tobi'
+4. Now try to modify the scheme by adding the column "phone" (varchar(20)) to the table "employees". :
+ALTER TABLE employees ADD COLUMN phone varchar(20);
 -----SQL Injection Advanced
 -----SQL Injection Mitigation
 -----Path Traversal
