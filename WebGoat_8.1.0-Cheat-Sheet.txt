@@ -21,6 +21,10 @@ The query in the code builds a dynamic query as seen in the previous example. Th
 "SELECT * FROM user_data WHERE login_count = " + Login_Count + " AND userid = "  + User_ID;
 Solution:
 SELECT * From user_data WHERE Login_Count = 1 and userid= 0 OR 1 = 1
+11. Compromising confidentiality with String SQL injection.
+"SELECT * FROM employees WHERE last_name = '" + name + "' AND auth_tan = '" + auth_tan + "';
+Employee Name: '
+Authentication TAN: ' OR '1' = '1
 -----------------------------
 (2) Broken Authentication
 -----------------------------
