@@ -17,9 +17,13 @@ GRANT ALTER TABLE TO UnauthorizedUser;
 9. The query in the code builds a dynamic query as seen in the previous example. The query is build by concatenating strings making it susceptible to String SQL injection:
 "SELECT * FROM user_data WHERE first_name = 'John' AND last_name = '" + lastName + "'";
 SELECT * FROM user_data WHERE first_name = 'John' AND last_name = 
-
 Your query was: SELECT * FROM user_data WHERE first_name = 'John' and last_name = '' or '1' = '1'
 Explanation: This injection works, because or '1' = '1' always evaluates to true (The string ending literal for '1 is closed by the query itself, so you should not inject it). So the injected query basically looks like this: SELECT * FROM user_data WHERE first_name = 'John' and last_name = '' or TRUE, which will always evaluate to true, no matter what came before it.
+10. Numeric SQL injection.
+The query in the code builds a dynamic query as seen in the previous example. The query in the code builds a dynamic query by concatenating a number making it susceptible to Numeric SQL injection:
+"SELECT * FROM user_data WHERE login_count = " + Login_Count + " AND userid = "  + User_ID;
+Solution:
+SELECT * From user_data WHERE Login_Count = 1 and userid= 0 OR 1 = 1
 -----------------------------
 (2) Broken Authentication
 -----------------------------
