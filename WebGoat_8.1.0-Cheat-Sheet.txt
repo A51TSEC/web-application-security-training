@@ -12,6 +12,8 @@ ALTER TABLE employees ADD COLUMN phone varchar(20);
 -----SQL Injection Advanced
 -----SQL Injection Mitigation
 -----Path Traversal
+5. Try to grant the usergroup "UnauthorizedUser" the right to alter tables:
+GRANT ALTER TABLE TO UnauthorizedUser;
 -----------------------------
 (2) Broken Authentication
 -----------------------------
