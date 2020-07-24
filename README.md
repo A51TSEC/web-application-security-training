@@ -1,1 +1,1 @@
-# web-application-security-training
+# WebGoat Version: 8.1.0 Solutions
