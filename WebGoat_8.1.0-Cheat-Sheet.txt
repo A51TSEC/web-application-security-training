@@ -9,9 +9,6 @@ SELECT department from employees where first_name='Bob'
 UPDATE employees SET department='Sales' WHERE first_name='Tobi'
 4. Now try to modify the scheme by adding the column "phone" (varchar(20)) to the table "employees". :
 ALTER TABLE employees ADD COLUMN phone varchar(20);
------SQL Injection Advanced
------SQL Injection Mitigation
------Path Traversal
 5. Try to grant the usergroup "UnauthorizedUser" the right to alter tables:
 GRANT ALTER TABLE TO UnauthorizedUser;
 9. The query in the code builds a dynamic query as seen in the previous example. The query is build by concatenating strings making it susceptible to String SQL injection:
