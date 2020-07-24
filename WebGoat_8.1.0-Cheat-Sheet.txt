@@ -30,12 +30,12 @@ The integrity of any data can be compromised, if an attacker per example changes
 You just found out that Tobi and Bob both seem to earn more money than you! Of course you cannot leave it at that.
 Better go and change your own salary so you are earning the most!
 Remember: Your name is John Smith and your current TAN is 3SL99A.
-
 Solution:
 Employee Name: SL99A'
 Authntication TAN: UPDATE Employees set SALARY = 90000 where USERID = 37648 --
-
-13.
+13. Compromising Availability
+Solution:
+Smith' ; drop table access_log --
 -----------------------------
 (2) Broken Authentication
 -----------------------------
