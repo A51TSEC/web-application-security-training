@@ -51,6 +51,11 @@ UNION
 ---BLIND SQL
 -----------------------------
 (2) Broken Authentication
+---Authentication Bypasses
+2. Change secQuestion0 to secQuestion00 and secQuestion1 to secQuestion11
+---JWT tokens
+---Password reset
+---Secure Password
 -----------------------------
 (3) Sensitive Data Exposure
 -----------------------------
